@@ -19,6 +19,7 @@ xmlhttp.onreadystatechange=function()
     }
   }
 xmlhttp.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url,true);
+xmlHttp.onreadystatechange = handleServerResponse;
 xmlhttp.send();
 
 
