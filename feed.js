@@ -1,7 +1,6 @@
 var xmlhttp;
 var host=window.location.host;
 var url=window.location.href;
-alert(host);
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
@@ -16,9 +15,6 @@ xmlhttp.onreadystatechange=function()
 	  alert(xmlhttp.status);
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-		alert();
-		alert(xmlhttp);
-		alert(xmlhttp.responseText);
 		document.write(xmlhttp.responseText);
 		document.body.insertAdjacentHTML('afterbegin', xmlhttp.responseText);
     }
