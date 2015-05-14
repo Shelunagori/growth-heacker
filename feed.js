@@ -12,8 +12,11 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
+	  alert();
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
+		alert();
+		alert(xmlhttp);
 		alert(xmlhttp.responseText);
 		document.body.insertAdjacentHTML('afterbegin', xmlhttp.responseText);
     }
