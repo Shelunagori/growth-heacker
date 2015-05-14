@@ -1,18 +1,28 @@
 var xmlhttp;
 var host=window.location.host;
 var url=window.location.href;
-
 alert("http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url);
-   $.ajax({
-   type:'GET',
-   url :"http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url,
-   success: function(data) {
-        console.log('success',data);
-			alert(data);
-			
-   },
-   error:function(exception){alert('Exeption:'+exception);}
-}); 
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+	  
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		alert(url);
+		document.body.insertAdjacentHTML('afterbegin', xmlhttp.responseText);
+    }
+  }
+xmlhttp.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url,true);
+xmlhttp.send();
+
+
 
 
 
