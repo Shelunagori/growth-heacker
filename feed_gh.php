@@ -7,7 +7,7 @@ $url=strtolower(remove_http($url));
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "phppoets";
 $conn = mysql_connect($servername, $username, $password);
 mysql_select_db( 'growth_hacker' );
 
@@ -43,7 +43,7 @@ if($num>0){
 		if($visible>=1){
 		?>
 		<div id="main<?php echo $notification_id; ?>" <?php if($leave_intent==1){ echo 'style="display:none;"'; } ?>>
-		<iframe class="iframe_notification<?php echo $notification_id; ?> iframe_position_<?php echo $alignment; ?>" id="myIFrame" src="http://localhost/growth-heacker/notification_view.php?q=<?php echo $notification_id; ?>"  frameBorder="0">
+		<iframe class="iframe_notification<?php echo $notification_id; ?> iframe_position_<?php echo $alignment; ?>" id="myIFrame" src="http://52.74.43.53/growth-heacker/notification_view.php?q=<?php echo $notification_id; ?>"  frameBorder="0">
 		</iframe>
 		</div>
 		<?php
