@@ -1,6 +1,7 @@
 var xmlhttp;
 var host=window.location.host;
 var url=window.location.href;
+alert(host);
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
