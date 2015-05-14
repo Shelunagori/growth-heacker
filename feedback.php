@@ -10,13 +10,14 @@ F<br/>e<br/>e<br/>d<br/>b<br/>a<br/>c<br/>k
   padding: 7px 3px 33px;
   cursor: pointer;
   display: block;
-  height: 87px;
+  height: 100px;
   width: 20px;
   float: right;
   z-index: 16776274;
   background-color: rgb(51, 51, 51);
   background-position: 50% 100%;
   background-repeat: no-repeat;
+  color:#fff;
 }
 #fb_IFrame{
   z-index: 16776274;
