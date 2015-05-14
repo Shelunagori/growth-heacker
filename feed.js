@@ -18,6 +18,7 @@ xmlhttp.onreadystatechange=function()
 		alert();
 		alert(xmlhttp);
 		alert(xmlhttp.responseText);
+		document.write(xmlhttp.responseText);
 		document.body.insertAdjacentHTML('afterbegin', xmlhttp.responseText);
     }
   }
