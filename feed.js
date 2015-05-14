@@ -2,13 +2,14 @@ var xmlhttp;
 var host=window.location.host;
 var url=window.location.href;
 
-
+alert("http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url);
    $.ajax({
    type:'GET',
    url :"http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url,
    success: function(data) {
         console.log('success',data);
-
+			alert(data);
+			
    },
    error:function(exception){alert('Exeption:'+exception);}
 }); 
