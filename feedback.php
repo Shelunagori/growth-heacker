@@ -10,7 +10,7 @@ F<br/>e<br/>e<br/>d<br/>b<br/>a<br/>c<br/>k
   padding: 7px 3px 33px;
   cursor: pointer;
   display: block;
-  height: 100px;
+  height: 120px;
   width: 20px;
   float: right;
   z-index: 16776274;
