@@ -9,7 +9,7 @@ $servername = "localhost";
 $username = "root";
 $password = "phppoets";
 $conn = mysql_connect($servername, $username, $password);
-mysql_select_db( 'growth_hacker' );
+mysql_select_db('growth_hacker');
 
 //////////check authentication 
 $sel=mysql_query("SELECT * FROM `domains` where `id`='$key'  AND `domain_name`='$host_name'");
@@ -61,7 +61,7 @@ if($num>0){
 }
 ?>
 <script>
-(function(a) {var ga2 = document.createElement('script'); ga2.type = 'text/javascript'; ga2.async = true; ga2.src = 'http://localhost/growth-heacker/leave_intent.js';var s2 = document.getElementsByTagName('script')[0]; s2.parentNode.insertBefore(ga2, s2);}(window, document))
+(function(a) {var ga2 = document.createElement('script'); ga2.type = 'text/javascript'; ga2.async = true; ga2.src = 'http://52.74.43.53/growth-heacker/leave_intent.js';var s2 = document.getElementsByTagName('script')[0]; s2.parentNode.insertBefore(ga2, s2);}(window, document))
 </script>
 <style>
 #main_notification_div{

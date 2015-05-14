@@ -17,5 +17,5 @@ xmlhttp2.onreadystatechange=function()
 		document.body.insertAdjacentHTML('afterbegin', xmlhttp2.responseText);
     }
   }
-xmlhttp2.open("GET","http://localhost/growth-heacker/feedback.php?key="+key+"&host="+host+"&url="+url,true);
+xmlhttp2.open("GET","http://52.74.43.53/growth-heacker/feedback.php?key="+key+"&host="+host+"&url="+url,true);
 xmlhttp2.send();

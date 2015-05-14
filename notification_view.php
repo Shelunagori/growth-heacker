@@ -2,7 +2,7 @@
 $q=@$_GET["q"];
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "phppoets";
 $conn = mysql_connect($servername, $username, $password);
 mysql_select_db( 'growth_hacker' );
 $sel_notification=mysql_query("SELECT * FROM `notifications` where `id`='$q'");
@@ -22,7 +22,7 @@ $leave_intent=$result_notification['leave_intent'];
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link href="http://localhost/growth-heacker_css/style_gh.css" rel="stylesheet" />
+<link href="http://52.74.43.53/growth-heacker/growth-heacker_css/style_gh.css" rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <?php if($leave_intent==1){ ?>
 <script type="text/javascript">

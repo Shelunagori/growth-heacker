@@ -2,7 +2,7 @@
 hello
 </div>
 <div id="IFrame_div">
-<iframe  id="fb_IFrame" src="http://localhost/growth-heacker/feedback_content.php"  frameBorder="0"></iframe>
+<iframe  id="fb_IFrame" src="http://52.74.43.53/growth-heacker/feedback_content.php"  frameBorder="0"></iframe>
 </div>
 <style>
 #gh_main_div{
