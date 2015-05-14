@@ -12,7 +12,8 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
-	  alert();
+	  alert(xmlhttp.readyState);
+	  alert(xmlhttp.status);
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
 		alert();
