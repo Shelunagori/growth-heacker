@@ -24,10 +24,11 @@ $(document).ready(function(){
 <button type="button" id="close_fd">X</button>
 	<div style="background-color: #eee;padding:5px;">
 	<form method="post">
+	<br/><br/>
 		Name: <input type="text" name="name"/><br/>
 		Email: <input type="email"/><br/>
 		Message: <textarea name="message"></textarea><br/>
-		<input type="submit" name="sub"/>
+		<input type="submit" name="sub"/><br/>
 	</form>
 	</div>
 </body>
