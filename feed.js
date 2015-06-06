@@ -5,7 +5,21 @@ alert(key);
 
 
 
-
+var xobj;
+//modern browers
+if(window.XMLHttpRequest)
+{
+xobj=new XMLHttpRequest();
+}
+//for ie
+else if(window.ActiveXObject)
+{
+xobj=new ActiveXObject("Microsoft.XMLHTTP");
+}
+else
+{
+alert("Your broweser doesnot support ajax");
+}
 if(xobj)
 {
 var c1=document.getElementById("soc_wing").value;
