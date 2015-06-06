@@ -29,7 +29,7 @@ xobj.onreadystatechange=function()
 {
 	alert(xobj.readyState);
 	alert(xobj.status);
-if(xobj.readyState==4 || xobj.status==200)
+if(xobj.readyState==4 && xobj.status==200)
 {	   
 document.body.innerHTML += xobj.responseText;
 }
