@@ -4,6 +4,7 @@ var url=window.location.href;
 
 
 $(document).ready(function(){
+	alert();
 	$("body").load("http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url);
 });
 
