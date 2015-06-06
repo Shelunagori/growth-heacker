@@ -29,7 +29,7 @@ xobj.onreadystatechange=function()
 {
 if(xobj.readyState==4 && xobj.status==200)
 {	   
-alert("hello ajax done");
+document.body.innerHTML += xobj.responseText;
 }
 }
 
