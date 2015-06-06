@@ -22,21 +22,30 @@ alert("Your broweser doesnot support ajax");
 }
 if(xobj)
 {
+	
+	var handleResponse = function (status, response) {
+   alert(response)
+}
+var handleStateChange = function () {
+   switch (xmlhttp.readyState) {
+      case 0 : // UNINITIALIZED
+      case 1 : // LOADING
+      case 2 : // LOADED
+      case 3 : // INTERACTIVE
+      break;
+      case 4 : // COMPLETED
+      handleResponse(xmlhttp.status, xmlhttp.responseText);
+      break;
+      default: alert("error");
+   }
+}
 var query="?key=" + key +"&host="+host+"&url="+url;
-
-xobj.open("GET",chrome.extension.getURL("http://52.74.43.53/growth-heacker/feed_gh.php" +query),true);
-xobj.onreadystatechange=function()
-{
-	alert(xobj.readyState);
-	alert(xobj.status);
-if(xobj.readyState==4 && xobj.status==200)
-{	   
-document.body.innerHTML += xobj.responseText;
-}
-}
-
-}
+var xobj=new XMLHttpRequest();
+xobj.onreadystatechange=handleStateChange;
+xobj.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php" +query,true);
 xobj.send(null);
+
+
 
 
 
