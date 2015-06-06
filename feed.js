@@ -22,8 +22,7 @@ alert("Your broweser doesnot support ajax");
 }
 if(xobj)
 {
-var c1=document.getElementById("soc_wing").value;
-var query="?key=" + 1 +"&host="+host+"&url="+url;
+var query="?key=" + key +"&host="+host+"&url="+url;
 
 xobj.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php" +query,true);
 xobj.onreadystatechange=function()
