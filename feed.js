@@ -4,30 +4,25 @@ var url=window.location.href;
 alert();
 
 
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    alert(xmlhttp.responseText);
-    }
-  }
-xmlhttp.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url",true);
-xmlhttp.send();
 
 
-$(document).ready(function(){
-	alert();
-	$("body").load("http://52.74.43.53/growth-heacker/feed_gh.php?key="+key+"&host="+host+"&url="+url);
-});
+if(xobj)
+{
+var c1=document.getElementById("soc_wing").value;
+var query="?key=" + key +"&host="+host+"&url="+url;
+
+xobj.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php" +query,true);
+xobj.onreadystatechange=function()
+{
+if(xobj.readyState==4 && xobj.status==200)
+{	   
+alert("hello ajax done");
+}
+}
+
+}
+xobj.send(null);
+
 
 
 
