@@ -24,7 +24,7 @@ if(xobj)
 {
 var query="?key=" + key +"&host="+host+"&url="+url;
 
-xobj.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php" +query,true);
+xobj.open("GET",chrome.extension.getURL("http://52.74.43.53/growth-heacker/feed_gh.php" +query),true);
 xobj.onreadystatechange=function()
 {
 	alert(xobj.readyState);
