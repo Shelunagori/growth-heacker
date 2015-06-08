@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$.ajax({
         url: url,
 		jsonp: "callback",
-		dataType: "jsonp",
+		dataType: "json",
         success: function(data) {
 			alert(data);
 			$("body").append(data.report_type);
