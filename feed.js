@@ -15,8 +15,8 @@ function createCORSRequest(method, url){
         xhr = null;
     }
    // return xhr;
-   alert(xhr);
-	document.body.innerHTML += xobj.responseText;
+   alert(xhr.responseText);
+	
 }
 
 
