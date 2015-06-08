@@ -1,37 +1,47 @@
+var xmlhttp;
 var host=window.location.host;
 var url=window.location.href;
+alert(host);
+alert(url);
 
 
+var xobj;
+//modern browers
+if(window.XMLHttpRequest)
+{
+xobj=new XMLHttpRequest();
+}
+//for ie
+else if(window.ActiveXObject)
+{
+xobj=new ActiveXObject("Microsoft.XMLHTTP");
+}
+else
+{
+alert("Your broweser doesnot support ajax");
+}
+if(xobj)
+{
+var query="?key=" + key +"&host="+host+"&url="+url;
 
-function createCORSRequest(method, url){
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr){
-        // XHR has 'withCredentials' property only if it supports CORS
-        xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined"){ // if IE use XDR
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-    } else {
-        xhr = null;
-    }
-    return xhr;
-   alert(xhr.responseText);
-	
+xobj.open("GET","http://52.74.43.53/growth-heacker/feed_gh.php" +query,true);
+xobj.onreadystatechange=function()
+{
+	alert(xobj.readyState);
+	alert(xobj.status);
+if(xobj.readyState==4 && xobj.status==200)
+{	   
+document.body.innerHTML += xobj.responseText;
+}
 }
 
-
-var request = createCORSRequest( "get", "http://52.74.43.53/growth-heacker/feed_test.php");
-alert(request.responseText);
-alert(request);
-if ( request ){
-    // Define a callback function
-    request.onload = function(){};
-    // Send request
-    request.send();
 }
+xobj.send(null);
 
 
 
+
+(function(a) {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = 'http://52.74.43.53/growth-heacker/feedback.js?key='+key;var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);}(window, document))
 
 
 
