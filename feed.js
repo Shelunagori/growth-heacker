@@ -6,6 +6,7 @@ $(document).ready(function(){
         url: url,
 		jsonp: "callback",
 		dataType: "json",
+		data: {"jobtitle":"job"},
         success: function(data) {
 			alert(data);
 			$("body").append(data.report_type);
