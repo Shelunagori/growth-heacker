@@ -1,5 +1,3 @@
-var host=window.location.host;
-var url=window.location.href;
 $(document).ready(function(){
     var url="http://52.74.43.53/growth-heacker/feed_gh.php";
 	$.ajax({
@@ -7,7 +5,8 @@ $(document).ready(function(){
 		jsonp: "callback",
 		dataType: "jsonp",
         success: function(data) {
-			$("body").append(data);
+			alert(data);
+			$("body").append(data.report_type);
         }
     });
 	
