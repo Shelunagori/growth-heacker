@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$.ajax({
         url: url,
 		jsonp: "callback",
-		dataType: "json",
+		dataType: "jsonp",
 		data: {"jobtitle":"job"},
         success: function(data) {
 			alert(data);
