@@ -3,10 +3,13 @@ $(document).ready(function(){
     var url="http://52.74.43.53/growth-heacker/feed_gh.php";
 		alert(url);
 	$.ajax({
-        url: url,
-		jsonp: "callback",
-		dataType: "jsonp",
-		data: {"jobtitle":"job"},
+        
+		type: 'GET',
+		url: url,
+		 async: false,
+		jsonpCallback: 'myJSON',
+		contentType: "application/json",
+		dataType: 'json',
         success: function(data) {
 			alert(data);
 			$("body").append(data.report_type);
