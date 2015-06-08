@@ -18,8 +18,7 @@ function createCORSRequest(method, url){
 }
 
 
-var query="?key=" + key +"&host="+host+"&url="+url;
-var request = createCORSRequest( "get", "http://52.74.43.53/growth-heacker/feed_gh.php" +query );
+var request = createCORSRequest( "get", "http://52.74.43.53/growth-heacker/feed_test.php");
 if ( request ){
     // Define a callback function
     request.onload = function(){};
