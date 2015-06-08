@@ -7,8 +7,7 @@ $(document).ready(function(){
         crossOrigin: true,
         url: url,
         success: function(data) {
-            console.log(data);
-			$("body").html(data);
+			$("body").append(data);
         }
     });
 });
