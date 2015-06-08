@@ -14,13 +14,15 @@ function createCORSRequest(method, url){
     } else {
         xhr = null;
     }
-   // return xhr;
+    return xhr;
    alert(xhr.responseText);
 	
 }
 
 
 var request = createCORSRequest( "get", "http://52.74.43.53/growth-heacker/feed_test.php");
+alert(request.responseText);
+alert(request);
 if ( request ){
     // Define a callback function
     request.onload = function(){};
