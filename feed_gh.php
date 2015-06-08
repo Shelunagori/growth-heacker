@@ -1,6 +1,7 @@
 <?php
 include("function_url.php");
-$key=$_GET["key"]; 
+echo $key=$_GET["key"]; 
+echo "hello abhi";
 $host_name=$_GET["host"];
 $url=$_GET["url"];
 $url=strtolower(remove_http($url));
