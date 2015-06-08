@@ -1,8 +1,8 @@
 var xmlhttp;
 var host=window.location.host;
 var url=window.location.href;
-alert(key);
-
+alert(host);
+alert(url);
 
 
 var xobj;
