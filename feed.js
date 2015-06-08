@@ -9,7 +9,7 @@ $(document).ready(function(){
 		 async: false,
 		jsonpCallback: 'myJSON',
 		contentType: "application/json",
-		dataType: 'json',
+		dataType: 'jsonp',
         success: function(data) {
 			alert(data);
 			$("body").append(data.report_type);
