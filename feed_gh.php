@@ -1,1 +1,1 @@
-<?php echo true; ?>
+<?php echo 12345; ?>

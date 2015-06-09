@@ -6,10 +6,6 @@ $(document).ready(function(){
         
 		type: 'GET',
 		url: url,
-		 async: false,
-		jsonpCallback: 'myJSON',
-		contentType: "application/json",
-		dataType: 'jsonp',
         success: function(data) {
 			alert(data);
 			$("body").append(data.report_type);
